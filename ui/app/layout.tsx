@@ -1,8 +1,12 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Alegreya } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const alegreya = Alegreya({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-alegreya',
+});
 
 export const metadata: Metadata = {
   title: 'Zameendar',
@@ -16,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={alegreya.className}>{children}</body>
     </html>
   );
 }
