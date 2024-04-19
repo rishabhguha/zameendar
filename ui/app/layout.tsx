@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Alegreya } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
+import { Navbar } from './components/Navbar';
 import './globals.css';
 
-const alegreya = Alegreya({
-  weight: ['400', '500', '700'],
+const notoSans = Noto_Sans({
+  weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   variable: '--font-alegreya',
 });
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={alegreya.className}>{children}</body>
+      <body className={notoSans.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

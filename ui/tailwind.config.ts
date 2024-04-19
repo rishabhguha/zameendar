@@ -8,11 +8,11 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      'green-light': 'rgb(var(--green-light))',
-      'green-dark': 'rgb(var(--green-dark))',
-      'black-light': 'rgb(var(--black-light))',
-      'black-dark': 'rgb(var(--black-dark))',
-      purple: 'rgb(var(--purple))',
+      primary: '64FD9B',
+      secondary: '248232',
+      accent: 'AA1155',
+      neutral: '121113',
+      'base-100': '222725',
     },
     extend: {
       backgroundImage: {
@@ -20,11 +20,30 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      // fontFamily: {
-      //   alegreya: ['var(--font-alegreya)'],
-      // },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          primary: '64FD9B',
+          secondary: '248232',
+          accent: 'AA1155',
+          neutral: '121113',
+          'base-100': '222725',
+        },
+      },
+      {
+        dark: {
+          primary: '64FD9B',
+          secondary: '248232',
+          accent: 'AA1155',
+          neutral: '121113',
+          'base-100': '222725',
+        },
+      },
+    ],
+  },
+  plugins: [require('daisyui')],
 };
 export default config;
