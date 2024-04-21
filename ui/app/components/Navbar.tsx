@@ -8,11 +8,11 @@ export const Navbar = () => {
       <div className='flex justify-between'>
         <div className='flex gap-10 items-center'>
           <Image
-            src='/zameendar_logo.jpg'
+            src='/zameendar_logo.png'
             alt='Zameendar Logo'
             width='100'
             height='0'
-            className='w-auto mr-4'
+            className='w-auto'
             priority
           />
           <ul className='flex gap-5 text-primary'>
