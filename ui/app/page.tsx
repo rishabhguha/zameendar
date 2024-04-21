@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import { Landing } from './components/Landing';
+import { Journey } from './components/Journey';
+import { Welcome } from './components/Welcome';
 
 export default function Home() {
   return (
     <main>
-      <Landing />
+      <Welcome />
+      <Journey />
     </main>
   );
 }
