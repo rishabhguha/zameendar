@@ -4,13 +4,13 @@ import React from 'react';
 
 export const Navbar = () => {
   return (
-    <div className='w-full fixed top-0 py-4 px-10'>
+    <div className='w-full fixed top-0 py-4 px-10 z-10'>
       <div className='flex justify-between'>
         <div className='flex gap-10 items-center'>
           <Image
             src='/zameendar_logo.png'
             alt='Zameendar Logo'
-            width='100'
+            width='130'
             height='0'
             className='w-auto'
             priority
