@@ -20,37 +20,27 @@ export const Welcome = () => {
 
   return (
     <section className='flex h-screen w-screen p-10 box-border'>
-      <div className='grid grid-cols-2 w-full'>
-        <div className='flex flex-col h-full items-start justify-center gap-8 font-light col-span-1'>
-          <div className='text-primary text-8xl'>Zameendar</div>
-          <div className='text-7xl'>
-            Real Estate
-            <TextTransition
-              springConfig={presets.gentle}
-              inline
-              className='mx-3'
-            >
-              {WORD1[textIndex]}
-            </TextTransition>
-            {' - '}
-            <TextTransition
-              springConfig={presets.gentle}
-              inline
-              className='mx-2 text-primary'
-            >
-              {WORD2[textIndex]}
-            </TextTransition>
-          </div>
-        </div>
-        <div className='flex flex-col h-full items-start justify-center gap-8 font-light col-span-1'>
-          <Image
-            alt='skyline-background'
-            src='/landing_bg.jpg'
-            width='0'
-            height='0'
-            className='w-full'
-            priority
-          />
+      <div className='flex flex-col w-full h-full items-start justify-center gap-8 font-light col-span-1'>
+        <Image
+          alt='skyline-background'
+          src='/landing_bg.jpg'
+          fill
+          className='w-full h-auto'
+          sizes='100vh'
+          priority
+        />
+        <div className='text-primary text-8xl z-10'>Zameendar</div>
+        <div className='text-7xl z-10'>
+          Real Estate
+          <TextTransition springConfig={presets.gentle} inline className='mx-3'>
+            {WORD1[textIndex]} {' - '}{' '}
+            <span className='text-primary'>{WORD2[textIndex]}</span>
+          </TextTransition>
+          <TextTransition
+            springConfig={presets.gentle}
+            inline
+            className='mx-2 text-primary'
+          ></TextTransition>
         </div>
       </div>
     </section>
