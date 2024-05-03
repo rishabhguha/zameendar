@@ -2,15 +2,15 @@ import React from 'react';
 import Image from 'next/image';
 export const Journey = () => {
   return (
-    <div>
+    <section className='bg-gradient-to-r from-primary to-secondary'>
       <div>
-        <h2>How it Works?</h2>
+      <div className='w-full text-center text-9xl'>How it Works</div>
       </div>
 
       <div className=' h-full justify-center col-span-1'>
         <Image
           alt='Customer Journey'
-          src='/customer_journey.png'
+          src='/customer_journey1.png'
           width='1000'
           height='100'
           className='w-full h-auto'
@@ -18,6 +18,6 @@ export const Journey = () => {
           priority
         />
       </div>
-    </div>
+    </section>
   );
 };
