@@ -1,19 +1,20 @@
 import React from 'react';
 import Image from 'next/image';
+import { Header } from '../common/components/Header';
 export const Journey = () => {
   return (
-    <section className='bg-gradient-to-r from-primary to-secondary'>
-      <div>
-      <div className='w-full text-center text-9xl'>How it Works</div>
+    <section className='bg-gradient-to-r from-primary to-secondary h-full '>
+      <div className='flex-1'>  
+      <div>  <Header content='How it Works'/>   </div>
       </div>
 
-      <div className=' h-full justify-center col-span-1'>
+      <div className=' justify-center col-span-1 flex-1'>
         <Image
           alt='Customer Journey'
-          src='/customer_journey1.png'
+          src='/customer_journey.png'
           width='1000'
-          height='100'
-          className='w-full h-auto'
+          height='190'
+          className='w-full h-fit'
           sizes='100vw'
           priority
         />
