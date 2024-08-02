@@ -13,7 +13,6 @@ export const Navbar = () => {
             width='130'
             height='0'
             className='w-auto'
-            priority
           />
           <ul className='flex gap-5 text-primary'>
             <li>
