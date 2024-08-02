@@ -5,8 +5,30 @@ import 'react-multi-carousel/lib/styles.css';
 import Carousel, { ResponsiveType } from 'react-multi-carousel';
 import Image from 'next/image';
 
-const Card = () => {
-  return <div className='w-[400px] h-[600px]'>Card</div>;
+type PropertyCardProps = {
+  imgSrc: string;
+};
+
+const PropertyCard = ({ imgSrc }: PropertyCardProps) => {
+  return (
+    <div className='h-[600px] mx-8 rounded-md box-border flex flex-col items-center shadow-sm bg-primary/40'>
+      <div className='h-[40%] w-full relative'>
+        <Image
+          alt='Gundam'
+          src={imgSrc}
+          priority
+          fill
+          //layout='responsive'
+          // width={300}
+          // height={0}
+          className='rounded-md'
+        />
+      </div>
+      <div className='text-center text-5xl mt-[-20px] z-10'>
+        Sample Property
+      </div>
+    </div>
+  );
 };
 
 const BreakpointSlides: ResponsiveType = {
@@ -34,48 +56,20 @@ export const Properties = () => (
       showDots={true}
       ssr={true} // means to not render carousel on server-side.
       infinite={true}
-      autoPlay={true}
+      //autoPlay={true}
       autoPlaySpeed={1500}
       keyBoardControl={true}
-      customTransition='all .5'
+      customTransition='ease-in-out all .5'
       transitionDuration={500}
       containerClass='carousel-container'
       removeArrowOnDeviceType={['tablet', 'mobile']}
       dotListClass='custom-dot-list-style'
-      itemClass='carousel-item-padding-40-px'
       className='h-[60%] w-[80%]'
     >
-      <Image
-        alt='Gundam'
-        src='/landing_bg.jpg'
-        priority
-        layout='responsive'
-        width={700}
-        height={475}
-      />
-      <Image
-        alt='Musgo'
-        src='/customer_journey.jpg'
-        priority
-        layout='responsive'
-        width={700}
-        height={475}
-      />
-      <Image
-        alt='Valley'
-        src='/zameendar_logo.jpg'
-        priority
-        layout='responsive'
-        width={700}
-        height={475}
-      />
-      <Image
-        alt='Beach'
-        src='/customer_journey.jpg'
-        layout='responsive'
-        width={700}
-        height={475}
-      />
+      <PropertyCard imgSrc='/landing_bg.jpg' />
+      <PropertyCard imgSrc='/landing_bg.jpg' />
+      <PropertyCard imgSrc='/landing_bg.jpg' />
+      <PropertyCard imgSrc='/landing_bg.jpg' />
     </Carousel>
   </section>
 );
